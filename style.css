@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(208, 168, 181);
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+header h3 {
+  font-size: 2rem;
+  color: #090909;
+  text-align: center;
+}
+
+/* Ramen Menu Section */
+#ramen {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-left: 640px;
+  
+}
+
+#ramen img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#ramen img:hover {
+  transform: scale(1.1);
+}
+
+/* Ramen Detail Section */
+#place {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#place .holder {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#place .name {
+  font-size: 1.5rem;
+  color: #0f0e0e;
+  bottom: 60px;
+}
+
+#place .restaurant {
+  font-size: 1.2rem;
+  color: #666;
+  bottom: 60px;
+}
+
+/* Rating and Comment Section */
+h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.rating-display {
+  font-weight: bold;
+  color: #050505;
+  text-align: center;
+}
+
+#comment-display {
+  font-style: italic;
+  color: #555;
+  text-align: center;
+}
+
+/* Form Section */
+#new-ramen {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#new-ramen h4 {
+  font-size: 1.5rem;
+  color: #121111;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#new-ramen label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+#new-ramen input[type="text"],
+#new-ramen input[type="number"],
+#new-ramen textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: rgb(137, 119, 119);
+}
+
+#new-ramen textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+#new-ramen input[type="submit"] {
+  background-color: #efefee;
+  color: #d25555;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#new-ramen input[type="submit"]:hover {
+  background-color: #d35400;
+}
