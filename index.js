@@ -1,4 +1,3 @@
-// Sample data for ramen details (replace with actual data if needed)
 const ramens = [
   {
     name: 'Gyukotsu Ramen',
@@ -37,7 +36,6 @@ const ramens = [
   },
 ];
 
-// Function to display ramen details when an image is clicked
 function handleClick(ramen) {
   const detailImage = document.querySelector('#place .holder');
   const detailName = document.querySelector('#place .name');
@@ -53,15 +51,13 @@ function handleClick(ramen) {
   commentDisplay.textContent = ramen.comment;
 }
 
-// Function to add click event listeners to ramen images
+
 function addClickListeners() {
   const ramenImages = document.querySelectorAll('#ramen img');
   ramenImages.forEach((img, index) => {
     img.addEventListener('click', () => handleClick(ramens[index]));
   });
 }
-
-// Function to handle form submission for adding new ramen
 function addSubmitListener() {
   const form = document.querySelector('#new-ramen');
   form.addEventListener('submit', (e) => {
@@ -75,29 +71,23 @@ function addSubmitListener() {
       comment: e.target['new-comment'].value,
     };
 
-    // Add the new ramen to the ramens array
     ramens.push(newRamen);
 
-    // Create a new image element and add it to the ramen menu
     const ramenMenu = document.querySelector('#ramen');
     const img = document.createElement('img');
     img.src = newRamen.image;
     img.alt = newRamen.name;
     ramenMenu.appendChild(img);
 
-    // Add click event listener to the new image
     img.addEventListener('click', () => handleClick(newRamen));
 
-    // Reset the form
     form.reset();
   });
 }
 
-// Initialize the app
 function main() {
   addClickListeners();
   addSubmitListener();
 }
 
-// Run the app after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', main);
